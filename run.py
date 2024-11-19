@@ -1,8 +1,10 @@
 from pyrogram import Client, filters, idle
 import io
 import sys
+from threading import Thread
 import subprocess
 from flask import Flask, redirect
+import os
 
 # Inisialisasi Userbot dengan sesi string
 SESSION_STRING = "BQAf70YAN9y2UpwyZi5Vq43VcSER9XYVwbNORSQ0PPWUEbrWap4413XMvjUM-X7F3mRQhFkyyORPY1X0XhmJhzvsMOgk1RjvElpEeR480406Cu8Z3SQdgtabGt-qPWa9YJcjvUm-uWgef-P74vuw2pmXcm8LBoyGLmjqY8ZdVhbncvm767QeTbCl9J0yrctJh4p5Pczw-b7vCuXOSqMIC6MiF-FTx2EuEcitvI-NgPHCfzyPLQ3LUBViBXKW81LiSaIPbms9pChp9WGX3YFEsx-8J9GeGEp_LtOYMeptz342tj-g1y9IprevKmTo-0bjhjBTVE9UqXp4aFWeejt9jOaqVwymXgAAAAA87_QTAA"
@@ -80,17 +82,19 @@ async def exec_code(client, message):
         else:
             await message.reply(f"**Output:**\n```\n{result}\n```")
 
+def run_flask():
+    port = int(os.getenv("PORT", 5000))  # Default ke 5000
+    web_app.run(host="0.0.0.0", port=port, threaded=True)
+
 if __name__ == "__main__":
     print("Bot dan Web Server sedang berjalan...")
-
-    # Jalankan Flask di thread terpisah agar bot tetap berjalan
-    from threading import Thread
-    def run_flask():
-        web_app.run(host="0.0.0.0", port=5000, threaded=True)
-
-    # Mulai Flask di thread terpisah
-    thread = Thread(target=run_flask)
-    thread.start()
-
-    # Jalankan bot dengan idle untuk tetap berjalan
-    app.run()
+    try:
+        # Jalankan Flask dan Pyrogram
+        thread = Thread(target=run_flask)
+        thread.start()
+        app.start()
+        idle()  # Pastikan Pyrogram tetap berjalan
+    except KeyboardInterrupt:
+        print("Menutup aplikasi...")
+    finally:
+        app.stop()
