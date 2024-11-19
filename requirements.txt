@@ -122,7 +122,7 @@ gcsfs
 azure-storage-blob
 pyodbc
 cx_oracle
-pytds
+
 
 pyrogram
 flask
@@ -248,7 +248,7 @@ gcsfs
 azure-storage-blob
 pyodbc
 cx_oracle
-pytds
+
 
 pyrogram
 flask
@@ -374,7 +374,7 @@ gcsfs
 azure-storage-blob
 pyodbc
 cx_oracle
-pytds
+
 
 pyrogram
 flask
@@ -500,7 +500,7 @@ gcsfs
 azure-storage-blob
 pyodbc
 cx_oracle
-pytds
+
 
 pyrogram
 flask
@@ -626,7 +626,7 @@ gcsfs
 azure-storage-blob
 pyodbc
 cx_oracle
-pytds
+
 
 pyrogram
 flask
@@ -752,7 +752,7 @@ gcsfs
 azure-storage-blob
 pyodbc
 cx_oracle
-pytds
+
 
 pyrogram
 flask
@@ -878,7 +878,7 @@ gcsfs
 azure-storage-blob
 pyodbc
 cx_oracle
-pytds
+
 
 pyrogram
 flask
@@ -1004,7 +1004,7 @@ gcsfs
 azure-storage-blob
 pyodbc
 cx_oracle
-pytds
+
 
 pyrogram
 flask
@@ -1130,7 +1130,7 @@ gcsfs
 azure-storage-blob
 pyodbc
 cx_oracle
-pytds
+
 
 pyrogram
 flask
@@ -1256,4 +1256,3 @@ gcsfs
 azure-storage-blob
 pyodbc
 cx_oracle
-pytds
