@@ -19,7 +19,6 @@ chardet==5.2.0
 charset-normalizer==3.3.2
 click==8.1.7
 cloudscraper==1.2.71
-cmake @ file:///home/n0n3m4/Desktop/Pydroid/zBuildPrepared/cmake-3.26.4-py3-none-any.whl#sha256=695389dbf5c0aa220776821172e2f03865e0fe9ba10d7459373597d21af6643e
 cmdw==0.29
 colorama==0.4.6
 configparser==7.1.0
@@ -60,7 +59,6 @@ mccabe==0.7.0
 mdurl==0.1.2
 metabypass==0.1.6
 multidict==6.0.5
-ninja @ file:///home/n0n3m4/Desktop/Pydroid/zBuildPrepared/ninja-1.11.1-py3-none-any.whl#sha256=bde2ef34b4295ff07a0c1703ce5c7f3acccd621a91b21d4c6aaf09bd8f6591a8
 numpy==1.26.1
 opencv-python==4.8.0.0
 packaging==24.1
